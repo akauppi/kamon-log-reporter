@@ -30,7 +30,7 @@ object Settings {
   lazy val basicSettings = Seq(
     ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) },
     scalaVersion                    := SVersion,
-    crossScalaVersions              := Seq("2.10.5", SVersion, "2.12.0"),
+    crossScalaVersions              := Seq(SVersion, "2.12.1"),
     resolvers                       ++= Dependencies.resolutionRepos,
     fork in run                     := true,
     parallelExecution in Global     := false,
@@ -44,12 +44,12 @@ object Settings {
       "-g:vars",
       "-feature",
       "-unchecked",
-      "-optimise",
+      //"-optimise",              // deprecated in Scala 2.12
       "-deprecation",
-      "-target:jvm-1.6",
+      "-target:jvm-1.6",          // gives warning on Scala 2.12: forcing 'jvm-1.8'
       "-language:postfixOps",
       "-language:implicitConversions",
-      "-Yinline-warnings",
+      //"-Yinline-warnings",      // not recognized by Scala 2.12
       "-Xlog-reflective-calls"
     )) ++ publishSettings ++ releaseSettings
 

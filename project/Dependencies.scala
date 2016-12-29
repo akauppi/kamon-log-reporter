@@ -22,8 +22,8 @@ object Dependencies {
     "Kamon Repository Snapshots" at "http://snapshots.kamon.io"
   )
 
-  val kamonVersion      = "0.6.3"
-  val akkaVersion       = "2.3.14"
+  val kamonVersion      = "0.6.5"
+  val akkaVersion       = "2.4.16"
   val slf4jVersion      = "1.7.7"
 
   val kamonCore         = "io.kamon"                  %%  "kamon-core"            % kamonVersion
@@ -32,7 +32,7 @@ object Dependencies {
   val akkaSlf4j         = "com.typesafe.akka"         %%  "akka-slf4j"            % akkaVersion
   val akkaTestKit       = "com.typesafe.akka"         %%  "akka-testkit"          % akkaVersion
 
-  val scalatest         = "org.scalatest"             %%  "scalatest"             % "2.2.4"
+  val scalatest         = "org.scalatest"             %%  "scalatest"             % "3.0.1"
   val slf4jApi          = "org.slf4j"                 %   "slf4j-api"             % slf4jVersion
   val logback           = "ch.qos.logback"            %   "logback-classic"       % "1.0.13"
 
