@@ -19,6 +19,7 @@ import Dependencies._
 
 lazy val root = (project in file("."))
   .settings(name := "kamon-log-reporter")
+  .settings(version := "0.6.4-ak-SNAPSHOT")    // Added by AKa - otherwise 'sbt +publishLocal' gives '0.1-SNAPSHOT'; where does that come from?
   .settings(basicSettings: _*)
   .settings(formatSettings: _*)
   .settings(

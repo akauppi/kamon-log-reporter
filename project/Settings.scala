@@ -25,12 +25,12 @@ import scalariform.formatter.preferences._
 object Settings {
 
   val JavaVersion = "1.6"
-  val SVersion = "2.11.8"
+  val SVersion = "2.12.1"
 
   lazy val basicSettings = Seq(
     ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) },
     scalaVersion                    := SVersion,
-    crossScalaVersions              := Seq(SVersion, "2.12.1"),
+    crossScalaVersions              := Seq("2.11.8", SVersion),
     resolvers                       ++= Dependencies.resolutionRepos,
     fork in run                     := true,
     parallelExecution in Global     := false,
